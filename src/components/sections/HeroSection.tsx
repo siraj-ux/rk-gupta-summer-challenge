@@ -6,7 +6,7 @@ import {
   Video,
   BookOpen,
   X,
-  Sun, 
+  Sun, // Added for the Summer badge
 } from 'lucide-react';
 import { useUTMParams } from '@/hooks/useUTMParams';
 import { useFacebookPixel } from '@/hooks/useFacebookPixel';
@@ -55,8 +55,8 @@ export const HeroSection = () => {
   });
 
   const [sheetData, setSheetData] = useState({
-    date: '24 March', 
-    time: '7:00 PM – 8:30 PM', 
+    date: '24 March', // Updated fallback date
+    time: '7:00 PM – 8:30 PM', // Updated fallback time
   });
 
   useEffect(() => {
@@ -102,6 +102,7 @@ export const HeroSection = () => {
 
     setIsSubmitting(true);
 
+    // 1. Facebook Pixel Tracking - Updated name
     if (window.fbq) {
       window.fbq('track', 'Lead', {
         content_name: 'Summer Challenge Registration',
@@ -121,7 +122,7 @@ export const HeroSection = () => {
       utm_content: getParam('utm_content'),
       gclid: getParam('gclid'),
       fbclid: getParam('fbclid'),
-      coursename: 'SummerChallenge_FB',
+      coursename: 'SummerChallenge_FB', // Updated tagging
     };
 
     try {
@@ -163,30 +164,30 @@ export const HeroSection = () => {
       <div className="container relative pt-10 pb-20 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
+          {/* 1. HEADLINES - Updated to Summer Challenge */}
           <div className="order-1 lg:col-start-1 lg:row-start-1 text-left space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               The ₹9 Summer Crypto Challenge, <br />
               <span className="text-[#facc15]"> 90 Minutes Mein Crypto Seekho Aur Kamao</span>
             </h1>
 
-            {/* Reduced text size for this specific paragraph */}
-            <p className="text-[#00a8e8] text-base md:text-lg block mt-4 font-semibold tracking-wide leading-relaxed">
+            <p className="text-[#00a8e8] text-xl md:text-2xl block mt-4 font-semibold tracking-wide">
               Is Summer Ka Sabse Smart Challenge: 
               Koi Tips Nahi. Koi Signals Nahi. Sirf Woh 
               Earning Framework Jo Kaam Karta Hai — 
               Hindi Mein, Step By Step.
             </p>
 
-            <p className="text-sm md:text-base text-white/90">
+            <p className="text-base md:text-lg text-white/90">
               Reserve Your Seat In This Live 90-Minute Summer Learning Challenge
             </p>
           </div>
 
-          {/* DATE GRID: Date and Time explicitly in the first row */}
+          {/* 2. DATE GRID - Date and Time moved to index 0 and 1 for the first row */}
           <div className="order-2 lg:col-start-1 lg:row-start-2 grid grid-cols-2 gap-3 max-w-md w-full">
             {[
-              { icon: Calendar, label: 'Date', value: sheetData.date }, // Position 1 (Col 1)
-              { icon: Clock, label: 'Time', value: sheetData.time },    // Position 2 (Col 2)
+              { icon: Calendar, label: 'Date', value: sheetData.date },
+              { icon: Clock, label: 'Time', value: sheetData.time },
               { icon: Sun, label: 'Edition', value: 'Summer' },
               { icon: Globe, label: 'Language', value: 'Hindi' },
               { icon: Video, label: 'Mode', value: 'Online (Live)' },
@@ -197,14 +198,15 @@ export const HeroSection = () => {
                 className="bg-white rounded-xl p-3 flex items-center gap-3 text-black hover:bg-gray-50 transition"
               >
                 <item.icon className="h-5 w-5 text-[#007ea7] shrink-0" />
-                <div className="min-w-0">
-                  <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold leading-none mb-1">{item.label}</p>
-                  <p className="font-bold text-sm truncate">{item.value}</p>
+                <div>
+                  <p className="text-xs text-gray-500">{item.label}</p>
+                  <p className="font-semibold text-sm">{item.value}</p>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* 3. STICKY FORM - Updated branding */}
           <div className="order-3 lg:col-start-2 lg:row-start-1 lg:row-span-3 sticky top-10 w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
             <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-[#00171f]" id="register">
               <h3 className="text-2xl font-bold text-center mb-1">
@@ -263,6 +265,10 @@ export const HeroSection = () => {
                   </span>
                 </label>
 
+                <p className="text-[11px] md:text-xs text-gray-500 text-center leading-relaxed italic px-2">
+                  ₹9 ek cup chai se bhi kam hai. Agar session aapke kaam ka na lage, aapko kuch nahi khona.
+                </p>
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -273,9 +279,14 @@ export const HeroSection = () => {
                   {isSubmitting ? 'Processing...' : addEbook ? 'Join the Summer Challenge @ ₹99/-' : 'Join the Summer Challenge @ ₹9/-'}
                 </button>
               </form>
+
+              <p className="text-xs text-center text-gray-500 mt-3">
+                No hype • No tips • Sirf challenge aur earning ka framework
+              </p>
             </div>
           </div>
 
+          {/* 4. NOT FOR EVERYONE SECTION - Updated branding */}
           <div className="order-4 lg:col-start-1 lg:row-start-3 bg-white/5 border border-white/10 rounded-xl p-6 max-w-lg w-full">
             <h3 className="text-base md:text-lg font-bold text-amber-400 uppercase mb-4 tracking-wide border-b border-white/10 pb-2 inline-block">
               THIS SUMMER CHALLENGE IS NOT FOR EVERYONE 

@@ -10,7 +10,7 @@ export const WorkshopLearningSection = () => {
     <section className="py-8 md:py-24 bg-white text-[#00171f]">
       <div className="container max-w-5xl mx-auto px-4">
 
-        {/* HEADER - UPDATED */}
+        {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-2xl md:text-4xl font-science font-bold mb-4">
             Yeh Summer Challenge Aapke Liye Hai Agar
@@ -22,7 +22,7 @@ export const WorkshopLearningSection = () => {
           </p>
         </div>
 
-        {/* CONTENT CARDS - UPDATED */}
+        {/* CONTENT CARDS */}
         <div className="grid md:grid-cols-2 gap-6">
 
           {/* CARD 1 */}
@@ -78,7 +78,7 @@ export const WorkshopLearningSection = () => {
           </div>
         </div>
 
-        {/* BOTTOM LINE - UPDATED */}
+        {/* FOOT NOTE */}
         <div className="mt-12 max-w-3xl mx-auto text-center border-t border-gray-100 pt-8">
           <p className="text-lg md:text-xl text-[#00171f]/90 leading-relaxed">
             Yeh challenge un logon ke liye hai jo

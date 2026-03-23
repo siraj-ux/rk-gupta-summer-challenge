@@ -14,7 +14,7 @@ const faqs = [
   {
     question: 'Kya yeh live session hai?',
     answer:
-      'Haan. Yeh fully live learning masterclass hai, jahan concepts real-time explain kiye jaate hain.',
+      'Haan. Yeh fully live learning Challenge hai, jahan concepts real-time explain kiye jaate hain.',
   },
   {
     question: 'Kya yahan specific actions ya suggestions di jaayengi?',
@@ -31,15 +31,15 @@ const faqs = [
 export const FAQSection = () => {
   return (
     <section className="py-8 md:py-24 bg-[#003459] text-white">
-      <div className="container">
+      <div className="container px-4">
 
         {/* HEADER */}
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-4xl font-science font-bold mb-3">
-            Frequently Asked Questions
+           Summer Challenge Ke Baare Mein Frequently Asked Questions 
           </h2>
           <p className="text-white/80">
-            Common Doubts, Clear, Honest Answers.
+            Common Doubts About This Summer Challenge — Clear, Honest Answers. 
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export const FAQSection = () => {
                 value={`item-${index}`}
                 className="bg-[#00171f] rounded-xl border border-[#007ea7]/40 px-6"
               >
-                <AccordionTrigger className="text-white hover:no-underline text-left font-semibold py-5">
+                <AccordionTrigger className="text-white hover:no-underline text-left font-semibold py-5 transition-all">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-white/85 pb-5 leading-relaxed">
