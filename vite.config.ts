@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/rk-gupta-summer-challenge/",   // IMPORTANT for custom domain (webinar.coachrkgupta.com)
+  base: "/",   // IMPORTANT for custom domain (webinar.coachrkgupta.com)
 
   server: {
     host: "::",
