@@ -102,9 +102,9 @@ export const HeroSection = () => {
 
     setIsSubmitting(true);
 
-    // --- FACEBOOK TRACKING START ---
+    // --- FACEBOOK TRACKING LOGIC ---
     if (typeof window !== 'undefined' && window.fbq) {
-      // Initialize with Advanced Matching for the specific ID
+      // 1. Initialize Advanced Matching for Pixel 1601097181015212
       window.fbq('init', '1601097181015212', {
         em: formData.email.toLowerCase().trim(),
         ph: formData.phone.trim(),
@@ -112,21 +112,21 @@ export const HeroSection = () => {
         ct: formData.city.toLowerCase()
       });
 
-      // Track AddToCart
+      // 2. Track AddToCart
       window.fbq('track', 'AddToCart', {
         content_name: addEbook ? 'Summer Challenge + Ebooks' : 'Summer Challenge Registration',
         value: addEbook ? 99 : 9,
         currency: 'INR'
       });
 
-      // Track Lead
+      // 3. Track Lead
       window.fbq('track', 'Lead', {
         content_name: 'Summer Challenge Registration',
         value: addEbook ? 99 : 9,
         currency: 'INR'
       });
     }
-    // --- FACEBOOK TRACKING END ---
+    // --- END FACEBOOK TRACKING LOGIC ---
 
     const payload = {
       name: formData.name,
@@ -168,7 +168,11 @@ export const HeroSection = () => {
     }).toString();
 
     const finalBaseUrl = addEbook ? EBOOKS_RAZORPAY_URL : REGISTRATION_RAZORPAY_URL;
-    window.location.href = `${finalBaseUrl}?${razorpayQueryParams}`;
+    
+    // DELAY ADDED: Give the browser 500ms to finish sending FB Pixel data before redirecting
+    setTimeout(() => {
+      window.location.href = `${finalBaseUrl}?${razorpayQueryParams}`;
+    }, 500);
   };
 
   return (

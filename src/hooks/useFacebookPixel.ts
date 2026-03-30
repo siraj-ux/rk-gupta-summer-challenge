@@ -42,6 +42,7 @@ export function useFacebookPixel({ eventName, eventParams, eventID }: PixelOptio
     // 3. Track Custom Event (Purchase/Lead/etc) for all pixels
     if (eventName) {
       if (eventID) {
+        // If eventID is provided, pass it as the 4th argument (crucial for CAPI)
         window.fbq!("track", eventName, eventParams || {}, { eventID });
       } else {
         window.fbq!("track", eventName, eventParams || {});
