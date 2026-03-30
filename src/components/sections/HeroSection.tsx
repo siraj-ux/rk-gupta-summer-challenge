@@ -102,13 +102,31 @@ export const HeroSection = () => {
 
     setIsSubmitting(true);
 
-    if (window.fbq) {
+    // --- FACEBOOK TRACKING START ---
+    if (typeof window !== 'undefined' && window.fbq) {
+      // Initialize with Advanced Matching for the specific ID
+      window.fbq('init', '1601097181015212', {
+        em: formData.email.toLowerCase().trim(),
+        ph: formData.phone.trim(),
+        fn: formData.name.split(' ')[0].toLowerCase(),
+        ct: formData.city.toLowerCase()
+      });
+
+      // Track AddToCart
+      window.fbq('track', 'AddToCart', {
+        content_name: addEbook ? 'Summer Challenge + Ebooks' : 'Summer Challenge Registration',
+        value: addEbook ? 99 : 9,
+        currency: 'INR'
+      });
+
+      // Track Lead
       window.fbq('track', 'Lead', {
         content_name: 'Summer Challenge Registration',
         value: addEbook ? 99 : 9,
         currency: 'INR'
       });
     }
+    // --- FACEBOOK TRACKING END ---
 
     const payload = {
       name: formData.name,
@@ -169,7 +187,6 @@ export const HeroSection = () => {
               <span className="text-[#facc15]"> 90 Minutes Mein Crypto Seekho Aur Kamao</span>
             </h1>
 
-            {/* UPDATED TEXT SECTION: Reduced size and better formatting */}
             <p className="text-[#00a8e8] text-base md:text-lg block mt-6 font-semibold leading-relaxed max-w-xl">
               Is Summer Ka Sabse Smart Challenge: <br className="hidden md:block" />
               Koi Tips Nahi. Koi Signals Nahi. Sirf Woh 
