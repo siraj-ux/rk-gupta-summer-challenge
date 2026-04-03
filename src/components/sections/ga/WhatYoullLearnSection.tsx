@@ -34,7 +34,7 @@ export const WhatYoullLearnSection = () => {
 
           <p className="text-lg text-white/85 leading-relaxed">
             Is challenge mein har topic ko <span className="font-semibold text-[#00a8e8]">step-by-step</span>{' '}
-            explain kiya jaayega, taaki flow samajh aaye aur earning ki clarity build ho.
+            explain kiya jaayega, taaki flow samajh aaye aur decision-making ki clarity build ho.
           </p>
         </div>
 
@@ -120,11 +120,11 @@ export const WhatYoullLearnSection = () => {
             </span>
             <br className="hidden md:block" />
             
-            Crypto seekho aur kamao.
+            Crypto seekho aur samjho..
             <br />
             Agar challenge aapke kaam ka na lage, kuch nahi khona. 
             <br />
-            Agar kaam aaya, toh earning ka pura framework mil gaya.
+            Agar kaam aaya, toh decision-making ka pura framework mil gaya.
           </p>
 
           <button

@@ -180,13 +180,13 @@ export const HeroSection = () => {
           <div className="order-1 lg:col-start-1 lg:row-start-1 text-left space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               The ₹9 Summer Crypto Challenge, <br />
-              <span className="text-[#facc15]"> 90 Minutes Mein Crypto Seekho Aur Kamao</span>
+              <span className="text-[#facc15]"> 90 Minutes Mein Crypto seekho aur samjho.</span>
             </h1>
 
             <p className="text-[#00a8e8] text-base md:text-lg block mt-4 font-semibold tracking-wide leading-relaxed">
               Is Summer Ka Sabse Smart Challenge: 
               Koi Tips Nahi. Koi Signals Nahi. Sirf Woh 
-              Earning Framework Jo Kaam Karta Hai — 
+              decision-making framework Jo Kaam Karta Hai — 
               Hindi Mein, Step By Step.
             </p>
 

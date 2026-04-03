@@ -29,12 +29,12 @@ export const WhatYoullLearnSection = () => {
         {/* SECTION 8: HEADER - THREE KEY TAKEAWAYS */}
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-science font-bold mb-6">
-            Is 90-Minute Summer Challenge Mein Yeh 3 Cheezein Seekhoge Jo Kamane Ke Liye Zaroori Hain:
+            Is 90-Minute Summer Challenge Mein Yeh 3 Cheezein Seekhoge Jo Samajhne Ke Liye Zaroori Hain:
           </h2>
 
           <p className="text-lg text-white/85 leading-relaxed">
             Is challenge mein har topic ko <span className="font-semibold text-[#00a8e8]">step-by-step</span>{' '}
-            explain kiya jaayega, taaki flow samajh aaye aur earning ki clarity build ho.
+            explain kiya jaayega, taaki flow samajh aaye aur decision-making ki clarity build ho.
           </p>
         </div>
 
@@ -95,11 +95,11 @@ export const WhatYoullLearnSection = () => {
             <br className="hidden md:block" />
             
             {/* STANDARD TEXT */}
-            Crypto seekho aur kamao.
+            Crypto seekho aur samjho..
             <br />
             Agar challenge aapke kaam ka na lage, kuch nahi khona. 
             <br />
-            Agar kaam aaya, toh earning ka pura framework mil gaya.
+            Agar kaam aaya, toh decision-making ka pura framework mil gaya.
           </p>
 
           <button

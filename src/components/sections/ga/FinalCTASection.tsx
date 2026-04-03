@@ -58,13 +58,13 @@ export const FinalCTASection = ({ onCTAClick }: FinalCTASectionProps) => {
           <h2 className="text-xl md:text-4xl font-bold mb-5 leading-tight tracking-tight px-2">
             90-Minute Summer Crypto Challenge: 
             <span className="block md:inline-block md:ml-2 text-[#00a8e8]">
-              Seekho Aur Kamao — Sirf ₹9 Mein
+              Seekho Aur Samjho — Sirf ₹9 Mein
             </span>
           </h2>
 
           {/* BODY */}
           <p className="text-sm md:text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed px-4">
-            4,000+ log yeh summer challenge le chuke hain. Seekha. Samjha. Kamana shuru kiya. Ab yeh summer challenge aapka hai.
+            4,000+ log yeh summer challenge le chuke hain. Seekha. Samjha. Self-sufficient hua. 
           </p>
 
           {/* CTA CARD */}
@@ -89,7 +89,7 @@ export const FinalCTASection = ({ onCTAClick }: FinalCTASectionProps) => {
 
             {/* TRUST LINE */}
             <p className="text-xs md:text-base text-gray-500 italic mb-6 px-2">
-              "90-minute summer challenge lo. ₹9 lagao. Crypto ka earning framework le jao."
+              "90-minute summer challenge lo. ₹9 lagao. Crypto ka decision-making framework le jao."
             </p>
 
             {/* CTA BUTTON */}

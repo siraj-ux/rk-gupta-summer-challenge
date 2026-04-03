@@ -188,13 +188,13 @@ export const HeroSection = () => {
           <div className="order-1 lg:col-start-1 lg:row-start-1 text-left space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               The ₹9 Summer Crypto Challenge, <br />
-              <span className="text-[#facc15]"> 90 Minutes Mein Crypto Seekho Aur Kamao</span>
+              <span className="text-[#facc15]"> 90 Minutes Mein Crypto Seekho Aur Samjho</span>
             </h1>
 
             <p className="text-[#00a8e8] text-base md:text-lg block mt-6 font-semibold leading-relaxed max-w-xl">
               Is Summer Ka Sabse Smart Challenge: <br className="hidden md:block" />
               Koi Tips Nahi. Koi Signals Nahi. Sirf Woh 
-              Earning Framework Jo Kaam Karta Hai — 
+              decision-making framework Jo Kaam Karta Hai — 
               Hindi Mein, Step By Step.
             </p>
 
@@ -299,7 +299,7 @@ export const HeroSection = () => {
               </form>
 
               <p className="text-xs text-center text-gray-500 mt-3">
-                No hype • No tips • Sirf challenge aur earning ka framework
+                No hype • No tips • Sirf challenge aur decision-making ka framework
               </p>
             </div>
           </div>
